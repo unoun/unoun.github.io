@@ -6,8 +6,36 @@
     <description>Recent content in Posts on Personal Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 26 May 2016 07:28:54 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 May 2016 07:19:09 +0900</lastBuildDate>
     <atom:link href="https://unoun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mac版GnuCashの帳票の日本語表示をなおす方法</title>
+      <link>https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/</link>
+      <pubDate>Tue, 31 May 2016 07:19:09 +0900</pubDate>
+      
+      <guid>https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/</guid>
+      <description>&lt;p&gt;デフォルト状態では帳票の日本語が一切表示されない。
+しかも、メニューから辿れる範囲のフォントを指定してみても効果がない。&lt;/p&gt;
+
+&lt;p&gt;どうやら帳票部分はデフォルトのフォントが使われ、しかもUnicodeフォントでなければ日本語が表示されないようだ。&lt;/p&gt;
+
+&lt;p&gt;そこで、以下のように ~/.gtkrc-2.0.gnucash を書くことによって、デフォルトをUnicodeフォントにして、他は通常の日本語フォントを設定している。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#
+style &amp;quot;GtkDefault&amp;quot; {
+  font_name = &amp;quot;Arial Unicode MS&amp;quot;
+}
+widget_class &amp;quot;*&amp;quot; style &amp;quot;GtkDefault&amp;quot;
+
+#
+style &amp;quot;gnc-register&amp;quot; {
+  font_name = &amp;quot;Hiragino Sans W2&amp;quot;
+}
+widget &amp;quot;*.GnucashSheet&amp;quot; style &amp;quot;gnc-register&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>人工知能アシスタントのいる世界</title>

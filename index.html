@@ -46,6 +46,18 @@
                     
                         <div class="row">
                             <div class="col-md-12 content-card">
+                                <h1><a href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/">Mac版GnuCashの帳票の日本語表示をなおす方法</a></h1>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-calendar"></i>May 31, 2016</li>
+                                    <li><i class="fa fa-user"></i></li>
+                                </ul>
+                                デフォルト状態では帳票の日本語が一切表示されない。 しかも、メニューから辿れる範囲のフォントを指定してみても効果がない。 どうやら帳票部分はデフォルトのフォントが使われ、しかもUnicodeフォントでなければ日本語が表示されないようだ。 そこで、以下のように ~/.gtkrc-2.0.gnucash を書くことによって、デフォルトをUnicodeフォントにして、他は通常の日本語フォントを設定している。 # style &quot;GtkDefault&quot; { font_name = &quot;Arial Unicode MS&quot; } widget_class &quot;*&quot; style &quot;GtkDefault&quot; # style &quot;gnc-register&quot; { font_name = &quot;Hiragino Sans W2&quot; } widget &quot;*.GnucashSheet&quot; style &quot;gnc-register&quot;
+                                <a class="btn btn-custom" href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/" role="button">Read More</a>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-12 content-card">
                                 <h1><a href="https://unoun.github.io/2016/05/the-world-ai-assistant-is-in/">人工知能アシスタントのいる世界</a></h1>
                                 <ul class="list-inline">
                                     <li><i class="fa fa-calendar"></i>May 26, 2016</li>
@@ -91,6 +103,8 @@
     <div class="col-md-11 col-md-offset-1 card">
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
+            
+                <li><a href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/">Mac版GnuCashの帳票の日本語表示をなおす方法</a></li>
             
                 <li><a href="https://unoun.github.io/2016/05/the-world-ai-assistant-is-in/">人工知能アシスタントのいる世界</a></li>
             
