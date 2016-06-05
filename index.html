@@ -46,6 +46,18 @@
                     
                         <div class="row">
                             <div class="col-md-12 content-card">
+                                <h1><a href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/">WiMAX2&#43;とMacのTCP SACKの相性</a></h1>
+                                <ul class="list-inline">
+                                    <li><i class="fa fa-calendar"></i>June 5, 2016</li>
+                                    <li><i class="fa fa-user"></i></li>
+                                </ul>
+                                WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、 パケットを眺めてみたところ、TCPのSACKに関連があるようだった。 同じサイトに対してフレッツ回線からは問題なかったところまでは確認できたが、それ以上の問題の切り分けはできなかった。 原因が確定していないものの、/etc/sysctl.confに次のような設定をして回避している。 net.inet.tcp.sack=0 net.inet.tcp.delayed_ack=1
+                                <a class="btn btn-custom" href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/" role="button">Read More</a>
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-12 content-card">
                                 <h1><a href="https://unoun.github.io/2016/06/they-search-on-your-behalf/">あなたの代わりに検索します</a></h1>
                                 <ul class="list-inline">
                                     <li><i class="fa fa-calendar"></i>June 3, 2016</li>
@@ -128,6 +140,8 @@
         <h5>Recent Posts</h5>
         <ul class="list-unstyled posts-recent">
             
+                <li><a href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/">WiMAX2&#43;とMacのTCP SACKの相性</a></li>
+            
                 <li><a href="https://unoun.github.io/2016/06/they-search-on-your-behalf/">あなたの代わりに検索します</a></li>
             
                 <li><a href="https://unoun.github.io/2016/06/possibility-of-voice-assistant/">音声アシスタントの可能性</a></li>
@@ -135,8 +149,6 @@
                 <li><a href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/">Mac版GnuCashの帳票の日本語表示をなおす方法</a></li>
             
                 <li><a href="https://unoun.github.io/2016/05/the-world-ai-assistant-is-in/">人工知能アシスタントのいる世界</a></li>
-            
-                <li><a href="https://unoun.github.io/2016/05/i-started-with-github-pages/">GitHub Pagesはじめました</a></li>
             
         </ul>
     </div>

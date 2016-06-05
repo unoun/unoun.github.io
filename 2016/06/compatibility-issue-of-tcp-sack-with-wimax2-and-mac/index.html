@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
     <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.15" />
-    <title>Categories</title>
+    <title>WiMAX2&#43;とMacのTCP SACKの相性</title>
     
     
     
@@ -12,7 +12,7 @@
     <meta name="keywords" content='' />
     
     
-    <link href="https://unoun.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="Personal Log" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Personal Log" />
     <link rel="stylesheet" href="https://unoun.github.io/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://unoun.github.io/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="https://unoun.github.io/css/font-awesome.min.css" />
@@ -43,14 +43,51 @@
             <div class="row" id="content-main">
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-md-12 content-card">
-                            <h2>Categories</h2>
-                            <table class="table">
-                                
-                                
-                            </table>
-                        </div>
-                    </div>
+    <div class="col-md-12 content-card">
+        <h1>WiMAX2&#43;とMacのTCP SACKの相性</h1>
+        
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>June 5, 2016</li>
+                <li><i class="fa fa-user"></i></li>
+                <li><i class="fa fa-folder"></i></li>
+            </ul>
+        
+        
+    <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f&amp;text=WiMAX2%2b%e3%81%a8Mac%e3%81%aeTCP%20SACK%e3%81%ae%e7%9b%b8%e6%80%a7"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f&amp;title=WiMAX2%2b%e3%81%a8Mac%e3%81%aeTCP%20SACK%e3%81%ae%e7%9b%b8%e6%80%a7"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
+        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
+        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fcompatibility-issue-of-tcp-sack-with-wimax2-and-mac%2f&amp;title=WiMAX2%2b%e3%81%a8Mac%e3%81%aeTCP%20SACK%e3%81%ae%e7%9b%b8%e6%80%a7"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
+    </ul>
+
+
+        <p>WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、
+パケットを眺めてみたところ、TCPのSACKに関連があるようだった。</p>
+
+<p>同じサイトに対してフレッツ回線からは問題なかったところまでは確認できたが、それ以上の問題の切り分けはできなかった。</p>
+
+<p>原因が確定していないものの、/etc/sysctl.confに次のような設定をして回避している。</p>
+
+<pre><code>net.inet.tcp.sack=0
+net.inet.tcp.delayed_ack=1
+</code></pre>
+
+        
+    <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
+        
+    </ul>
+
+
+    </div>
+</div>
+
+                    
+    
+
+
                 </div>
                 <div class="col-md-4">
                     <div class="row">

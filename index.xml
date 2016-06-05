@@ -6,8 +6,27 @@
     <description>Recent content on Personal Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 03 Jun 2016 21:42:41 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jun 2016 17:40:07 +0900</lastBuildDate>
     <atom:link href="https://unoun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>WiMAX2&#43;とMacのTCP SACKの相性</title>
+      <link>https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/</link>
+      <pubDate>Sun, 05 Jun 2016 17:40:07 +0900</pubDate>
+      
+      <guid>https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/</guid>
+      <description>&lt;p&gt;WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、
+パケットを眺めてみたところ、TCPのSACKに関連があるようだった。&lt;/p&gt;
+
+&lt;p&gt;同じサイトに対してフレッツ回線からは問題なかったところまでは確認できたが、それ以上の問題の切り分けはできなかった。&lt;/p&gt;
+
+&lt;p&gt;原因が確定していないものの、/etc/sysctl.confに次のような設定をして回避している。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;net.inet.tcp.sack=0
+net.inet.tcp.delayed_ack=1
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>あなたの代わりに検索します</title>
