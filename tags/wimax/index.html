@@ -50,7 +50,7 @@
                                     <li><i class="fa fa-calendar"></i>June 5, 2016</li>
                                     <li><i class="fa fa-user"></i></li>
                                 </ul>
-                                WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、 パケットを眺めてみたところ、TCPのSACKに関連があるようだった。 同じサイトに対してフレッツ回線からは問題なかったところまでは確認できたが、それ以上の問題の切り分けはできなかった。 原因が確定していないものの、/etc/sysctl.confに次のような設定をして回避している。 net.inet.tcp.sack=0 net.inet.tcp.delayed_ack=1
+                                WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、 パケットを眺め
                                 <a class="btn btn-custom" href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/" role="button">Read More</a>
                             </div>
                         </div>
