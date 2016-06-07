@@ -25,6 +25,12 @@
 &lt;pre&gt;&lt;code&gt;net.inet.tcp.sack=0
 net.inet.tcp.delayed_ack=1
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;どうもSACKを切るとダメなサイトもあるようで、以下の設定と試行錯誤している。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;net.inet.tcp.sack=1
+net.inet.tcp.delayed_ack=1
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
