@@ -6,8 +6,77 @@
     <description>Recent content on Personal Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Jun 2016 06:04:53 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jun 2016 23:17:58 +0900</lastBuildDate>
     <atom:link href="https://unoun.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</title>
+      <link>https://unoun.github.io/2016/06/how-to-get-icloud-caldav-and-carddav-url/</link>
+      <pubDate>Thu, 09 Jun 2016 23:17:58 +0900</pubDate>
+      
+      <guid>https://unoun.github.io/2016/06/how-to-get-icloud-caldav-and-carddav-url/</guid>
+      <description>&lt;p&gt;数年前に別のサイトで書いていた内容を2016年版として書き直してみました。&lt;/p&gt;
+
+&lt;p&gt;iCloudのカレンダーをLightningやSunbird等と同期させたい時、iCloudのCalDAVのURLが必要になります。
+また、iCloudの連絡先(アドレス帳)にアクセスするにはiCloudのCardDAVのURLが必要になります。&lt;/p&gt;
+
+&lt;p&gt;以下、Chromeを使ってURLを調べる方法です。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Chromeで &lt;a href=&#34;https://www.icloud.com/&#34;&gt;https://www.icloud.com/&lt;/a&gt; を開きます。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;メニューからデベロッパーツールを起動して(Windowsの場合F12を押せば起動)、Networkをクリックしておきます。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iCloudにサインインします。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Networkの検索窓にloginと打って検索します。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;一番上に名前がaccountLoginでPOSTしてる行が見つかるはずなのでクリックし、さらにPreviewをクリックします。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ツリーの中から以下の情報を探し出し(ピリオドがツリーの区切り)、値をメモっておきます。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;dsInfo.dsid&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;webservices.calendar.url&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;webservices.contacts.url&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;webservices.calendar.urlから、次のようにカレンダーのホスト名を求めます。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://pXX-calendarws.icloud.com:443&lt;/code&gt;(pXXのXXは数字)&lt;/p&gt;
+
+&lt;p&gt;↓↓↓↓&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://pXX-calendars.icloud.com:443&lt;/code&gt;(calendarwsのwsをsにする)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;CalDAVのURLは以下のようになります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ホーム &lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/home/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;仕事 &lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/work/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;リマインダー &lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/tasks/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;webservices.contacts.urlから、カレンダーと同様に連絡先のホスト名を求めます。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://pXX-contactsws.icloud.com:443&lt;/code&gt;(pXXのXXは数字)&lt;/p&gt;
+
+&lt;p&gt;↓↓↓↓&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://pXX-contacts.icloud.com:443&lt;/code&gt;(contactswsのwsをとる)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;CardDAVのURLは以下のようになります。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;https://pXX-contacts.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/carddavhome/card/&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>音声アシスタントにおける承認コード</title>

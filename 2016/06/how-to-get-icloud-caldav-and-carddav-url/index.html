@@ -4,15 +4,15 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.15" />
-    <title>Mac</title>
+    <title>iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</title>
     
     
     
-    <meta name="description" content="気になる情報や、空想などを書いていこうと思います。" />
+    <meta name="description" content="数年前に別のサイトで書いていた内容を2016年版として書き直してみました。 iCloudのカレンダーをLightningやSunbird等と同" />
     <meta name="keywords" content='' />
     
     
-    <link href="https://unoun.github.io/tags/mac/index.xml" rel="alternate" type="application/rss+xml" title="Personal Log" />
+    <link href="" rel="alternate" type="application/rss+xml" title="Personal Log" />
     <link rel="stylesheet" href="https://unoun.github.io/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://unoun.github.io/css/highlightjs-themes/androidstudio.css" />
     <link rel="stylesheet" href="https://unoun.github.io/css/font-awesome.min.css" />
@@ -42,32 +42,101 @@
         <div id="top" class="container">
             <div class="row" id="content-main">
                 <div class="col-md-8">
+                    <div class="row">
+    <div class="col-md-12 content-card">
+        <h1>iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</h1>
+        
+            
+            <ul class="list-inline meta">
+                <li><i class="fa fa-calendar"></i>June 9, 2016</li>
+                <li><i class="fa fa-user"></i></li>
+                <li><i class="fa fa-folder"></i><a href="https://unoun.github.io/categories/tips">tips</a></li>
+            </ul>
+        
+        
+    <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f&amp;text=iCloud%e3%81%aeCalDAV%e3%81%a8CardDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f&amp;title=iCloud%e3%81%aeCalDAV%e3%81%a8CardDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
+        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
+        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-caldav-and-carddav-url%2f&amp;title=iCloud%e3%81%aeCalDAV%e3%81%a8CardDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
+    </ul>
+
+
+        <p>数年前に別のサイトで書いていた内容を2016年版として書き直してみました。</p>
+
+<p>iCloudのカレンダーをLightningやSunbird等と同期させたい時、iCloudのCalDAVのURLが必要になります。
+また、iCloudの連絡先(アドレス帳)にアクセスするにはiCloudのCardDAVのURLが必要になります。</p>
+
+<p>以下、Chromeを使ってURLを調べる方法です。</p>
+
+<ol>
+<li><p>Chromeで <a href="https://www.icloud.com/">https://www.icloud.com/</a> を開きます。</p></li>
+
+<li><p>メニューからデベロッパーツールを起動して(Windowsの場合F12を押せば起動)、Networkをクリックしておきます。</p></li>
+
+<li><p>iCloudにサインインします。</p></li>
+
+<li><p>Networkの検索窓にloginと打って検索します。</p></li>
+
+<li><p>一番上に名前がaccountLoginでPOSTしてる行が見つかるはずなのでクリックし、さらにPreviewをクリックします。</p></li>
+
+<li><p>ツリーの中から以下の情報を探し出し(ピリオドがツリーの区切り)、値をメモっておきます。</p>
+
+<ul>
+<li><p>dsInfo.dsid</p></li>
+
+<li><p>webservices.calendar.url</p></li>
+
+<li><p>webservices.contacts.url</p></li>
+</ul></li>
+
+<li><p>webservices.calendar.urlから、次のようにカレンダーのホスト名を求めます。</p>
+
+<p><code>https://pXX-calendarws.icloud.com:443</code>(pXXのXXは数字)</p>
+
+<p>↓↓↓↓</p>
+
+<p><code>https://pXX-calendars.icloud.com:443</code>(calendarwsのwsをsにする)</p></li>
+
+<li><p>CalDAVのURLは以下のようになります。</p>
+
+<ul>
+<li><p>ホーム <code>https://pXX-calendars.icloud.com/&lt;dsInfo.dsid&gt;/calendars/home/</code></p></li>
+
+<li><p>仕事 <code>https://pXX-calendars.icloud.com/&lt;dsInfo.dsid&gt;/calendars/work/</code></p></li>
+
+<li><p>リマインダー <code>https://pXX-calendars.icloud.com/&lt;dsInfo.dsid&gt;/calendars/tasks/</code></p></li>
+</ul></li>
+
+<li><p>webservices.contacts.urlから、カレンダーと同様に連絡先のホスト名を求めます。</p>
+
+<p><code>https://pXX-contactsws.icloud.com:443</code>(pXXのXXは数字)</p>
+
+<p>↓↓↓↓</p>
+
+<p><code>https://pXX-contacts.icloud.com:443</code>(contactswsのwsをとる)</p></li>
+
+<li><p>CardDAVのURLは以下のようになります。</p>
+
+<ul>
+<li><code>https://pXX-contacts.icloud.com/&lt;dsInfo.dsid&gt;/carddavhome/card/</code></li>
+</ul></li>
+</ol>
+
+        
+    <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
+        
+    </ul>
+
+
+    </div>
+</div>
+
                     
-                        <div class="row">
-                            <div class="col-md-12 content-card">
-                                <h1><a href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/">WiMAX2&#43;とMacのTCP SACKの相性</a></h1>
-                                <ul class="list-inline">
-                                    <li><i class="fa fa-calendar"></i>June 5, 2016</li>
-                                    <li><i class="fa fa-user"></i></li>
-                                </ul>
-                                WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に、その接続だけ通信が全く行われなくなってタイ
-                                <a class="btn btn-custom" href="https://unoun.github.io/2016/06/compatibility-issue-of-tcp-sack-with-wimax2-and-mac/" role="button">Read More</a>
-                            </div>
-                        </div>
-                    
-                        <div class="row">
-                            <div class="col-md-12 content-card">
-                                <h1><a href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/">Mac版GnuCashの帳票の日本語表示をなおす方法</a></h1>
-                                <ul class="list-inline">
-                                    <li><i class="fa fa-calendar"></i>May 31, 2016</li>
-                                    <li><i class="fa fa-user"></i></li>
-                                </ul>
-                                デフォルト状態では帳票の日本語が一切表示されない。 しかも、メニューから辿れる範囲のフォントを指定してみても効果がない。 どうやら帳票部分はデフ
-                                <a class="btn btn-custom" href="https://unoun.github.io/2016/05/japanese-font-of-report-on-gnucash-for-mac/" role="button">Read More</a>
-                            </div>
-                        </div>
-                    
-                    
+    
+
 
                 </div>
                 <div class="col-md-4">
