@@ -8,7 +8,7 @@
     
     
     
-    <meta name="description" content="WiMAX2&#43;とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、 パケットを眺め" />
+    <meta name="description" content="WiMAX2&#43;とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に、その接続だけ通信が全く行われなくなってタイ" />
     <meta name="keywords" content='WiMAX,Mac,切れる' />
     
     
@@ -64,8 +64,7 @@
     </ul>
 
 
-        <p>WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に妙な感じに失敗することがあり、
-パケットを眺めてみたところ、TCPのSACKに関連があるようだった。</p>
+        <p>WiMAX2+とSpeed Wi-Fi NEXT W01とMacの組み合わせで、特定のサイトからダウンロードする時に、その接続だけ通信が全く行われなくなってタイムアウトして切れるように失敗することがあり、パケットを眺めてみたところ、TCPのSACKに関連があるようだった。</p>
 
 <p>同じサイトに対してフレッツ回線からは問題なかったところまでは確認できたが、それ以上の問題の切り分けはできなかった。</p>
 
@@ -75,7 +74,8 @@
 net.inet.tcp.delayed_ack=1
 </code></pre>
 
-<p>どうもSACKを切るとダメなサイトもあるようで、以下の設定と試行錯誤している。</p>
+<p>どうもSACKを切るとpackerを使ってDebianのisoをダウンロードする時に相当な確率で失敗してしまうことがわかったので、
+今は以下の設定にして様子を見ている。</p>
 
 <pre><code>net.inet.tcp.sack=1
 net.inet.tcp.delayed_ack=1
