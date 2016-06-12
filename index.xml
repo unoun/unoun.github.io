@@ -96,7 +96,9 @@
 &lt;li&gt;&lt;p&gt;仕事 &lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/work/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;リマインダー &lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/tasks/&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;標準以外のカレンダーのURLについては&lt;a href=&#34;https://unoun.github.io/2016/06/how-to-get-icloud-any-caldav-url/&#34;&gt;iCloudの任意のカレンダーのCalDAVのURLを得る方法(2016年版)&lt;/a&gt;を参照してください。&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;webservices.contacts.urlから、カレンダーと同様に連絡先のホスト名を求めます。&lt;/p&gt;
 
