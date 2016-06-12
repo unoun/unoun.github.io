@@ -6,8 +6,45 @@
     <description>Recent content in Tips on Personal Log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 09 Jun 2016 23:17:58 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jun 2016 18:33:11 +0900</lastBuildDate>
     <atom:link href="https://unoun.github.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iCloudの任意のカレンダーのCalDAVのURLを得る方法(2016年版)</title>
+      <link>https://unoun.github.io/2016/06/how-to-get-icloud-any-caldav-url/</link>
+      <pubDate>Sun, 12 Jun 2016 18:33:11 +0900</pubDate>
+      
+      <guid>https://unoun.github.io/2016/06/how-to-get-icloud-any-caldav-url/</guid>
+      <description>&lt;p&gt;数年前に別のサイトで書いていた内容を2016年版として書き直してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://unoun.github.io/2016/06/how-to-get-icloud-caldav-and-carddav-url/&#34;&gt;iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)&lt;/a&gt;では、
+標準のカレンダーのURLを得る方法しか記していませんでした。&lt;/p&gt;
+
+&lt;p&gt;以下、標準以外の任意のカレンダーのCalDAVのURLを調べる方法です。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Chromeで &lt;a href=&#34;https://www.icloud.com/&#34;&gt;https://www.icloud.com/&lt;/a&gt; を開きます。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;メニューからデベロッパーツールを起動して(Windowsの場合F12を押せば起動)、Networkをクリックしておきます。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;iCloudにサインインします。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;カレンダーをクリックします。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Networkの検索窓にstartupと打って検索します。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Typeがtext/jsonになっている行が見つかるはずなのでクリックし、さらにPreviewをクリックします。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;ツリーの中のCollectionのところをクリックして展開すると、0から始まるリストが表示されます。 それぞれをクリックして展開し、titleに記載されているカレンダー名を確認した上で、guidをメモっておきます。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;CalDAVのURLは以下のようになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;https://pXX-calendars.icloud.com/&amp;lt;dsInfo.dsid&amp;gt;/calendars/&amp;lt;guid&amp;gt;/&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;guid以外の値については&lt;a href=&#34;https://unoun.github.io/2016/06/how-to-get-icloud-caldav-and-carddav-url/&#34;&gt;iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)&lt;/a&gt;を参照してください。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</title>

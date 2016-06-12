@@ -4,11 +4,11 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.15" />
-    <title>自走式アシスタントロボの可能性</title>
+    <title>iCloudの任意のカレンダーのCalDAVのURLを得る方法(2016年版)</title>
     
     
     
-    <meta name="description" content="ASUSが発表した小型の自走式アシスタントロボを見て、考えてみた。 自走式には意外にも多くのメリットがある。 自分に追従してくるスピーカーだと考" />
+    <meta name="description" content="数年前に別のサイトで書いていた内容を2016年版として書き直してみました。 iCloudのCalDAVとCardDAVのURLを得る方法(20" />
     <meta name="keywords" content='' />
     
     
@@ -44,38 +44,54 @@
                 <div class="col-md-8">
                     <div class="row">
     <div class="col-md-12 content-card">
-        <h1>自走式アシスタントロボの可能性</h1>
+        <h1>iCloudの任意のカレンダーのCalDAVのURLを得る方法(2016年版)</h1>
         
             
             <ul class="list-inline meta">
-                <li><i class="fa fa-calendar"></i>June 7, 2016</li>
+                <li><i class="fa fa-calendar"></i>June 12, 2016</li>
                 <li><i class="fa fa-user"></i></li>
-                <li><i class="fa fa-folder"></i><a href="https://unoun.github.io/categories/daydreaming">daydreaming</a></li>
+                <li><i class="fa fa-folder"></i><a href="https://unoun.github.io/categories/tips">tips</a></li>
             </ul>
         
         
     <ul class="list-inline share" style="margin-top: 15px; margin-left: 0px">
-        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
-        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
-        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f&amp;text=%e8%87%aa%e8%b5%b0%e5%bc%8f%e3%82%a2%e3%82%b7%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%88%e3%83%ad%e3%83%9c%e3%81%ae%e5%8f%af%e8%83%bd%e6%80%a7"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
-        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f&amp;title=%e8%87%aa%e8%b5%b0%e5%bc%8f%e3%82%a2%e3%82%b7%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%88%e3%83%ad%e3%83%9c%e3%81%ae%e5%8f%af%e8%83%bd%e6%80%a7"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
-        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
-        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fpossibility-of-home-robot%2f&amp;title=%e8%87%aa%e8%b5%b0%e5%bc%8f%e3%82%a2%e3%82%b7%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%88%e3%83%ad%e3%83%9c%e3%81%ae%e5%8f%af%e8%83%bd%e6%80%a7"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
+        <li class="facebook-share"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f"><i class="fa fa-facebook fa-lg"></i>Facebook</a></li>
+        <li class="googleplus-share"><a target="_blank" href="https://plus.google.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f"><i class="fa fa-google-plus fa-lg"></i>Google+</a></li>
+        <li class="twitter-share"><a target="_blank" href="https://twitter.com/share?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f&amp;text=iCloud%e3%81%ae%e4%bb%bb%e6%84%8f%e3%81%ae%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc%e3%81%aeCalDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-twitter fa-lg"></i>Twitter</a></li>
+        <li class="reddit-share"><a target="_blank" href="http://reddit.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f&amp;title=iCloud%e3%81%ae%e4%bb%bb%e6%84%8f%e3%81%ae%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc%e3%81%aeCalDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-reddit fa-lg"></i>Reddit</a></li>
+        <li class="linkedin-share"><a target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f"><i class="fa fa-linkedin fa-lg"></i>LinkedIn</a></li>
+        <li class="stumbleupon-share"><a target="_blank" href="http://www.stumbleupon.com/submit?url=https%3a%2f%2funoun.github.io%2f2016%2f06%2fhow-to-get-icloud-any-caldav-url%2f&amp;title=iCloud%e3%81%ae%e4%bb%bb%e6%84%8f%e3%81%ae%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc%e3%81%aeCalDAV%e3%81%aeURL%e3%82%92%e5%be%97%e3%82%8b%e6%96%b9%e6%b3%95%282016%e5%b9%b4%e7%89%88%29"><i class="fa fa-stumbleupon fa-lg"></i>StumbleUpon</a></li>
     </ul>
 
 
-        <p>ASUSが発表した小型の自走式アシスタントロボを見て、考えてみた。</p>
+        <p>数年前に別のサイトで書いていた内容を2016年版として書き直してみました。</p>
 
-<p>自走式には意外にも多くのメリットがある。</p>
+<p><a href="/2016/06/how-to-get-icloud-caldav-and-carddav-url/">iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</a>では、
+標準のカレンダーのURLを得る方法しか記していませんでした。</p>
 
-<p>自分に追従してくるスピーカーだと考えれば、台所やリビングを行き来している間でも流し聴きできる。</p>
+<p>以下、標準以外の任意のカレンダーのCalDAVのURLを調べる方法です。</p>
 
-<p>追従してくるディスプレイだと考えれば、音声アシスタント機能と組み合わせて、ハンズフリーで動画や写真を見ることができる。</p>
+<ol>
+<li><p>Chromeで <a href="https://www.icloud.com/">https://www.icloud.com/</a> を開きます。</p></li>
 
-<p>もしもカメラや温度センサーがあれば、家のセキュリティに使えるし、お湯が沸いた時に知らせてもらうこともできる。
-この場合は段差を乗り越えられたり、背が伸ばせるほうがいいだろう。</p>
+<li><p>メニューからデベロッパーツールを起動して(Windowsの場合F12を押せば起動)、Networkをクリックしておきます。</p></li>
 
-<p>もしも小型のプロジェクターを内蔵できたら、床や壁に写すことで誘導したり通知したりできるので利用の幅が広がりそうだ。</p>
+<li><p>iCloudにサインインします。</p></li>
+
+<li><p>カレンダーをクリックします。</p></li>
+
+<li><p>Networkの検索窓にstartupと打って検索します。</p></li>
+
+<li><p>Typeがtext/jsonになっている行が見つかるはずなのでクリックし、さらにPreviewをクリックします。</p></li>
+
+<li><p>ツリーの中のCollectionのところをクリックして展開すると、0から始まるリストが表示されます。 それぞれをクリックして展開し、titleに記載されているカレンダー名を確認した上で、guidをメモっておきます。</p></li>
+
+<li><p>CalDAVのURLは以下のようになります。</p>
+
+<p><code>https://pXX-calendars.icloud.com/&lt;dsInfo.dsid&gt;/calendars/&lt;guid&gt;/</code></p>
+
+<p>guid以外の値については<a href="/2016/06/how-to-get-icloud-caldav-and-carddav-url/">iCloudのCalDAVとCardDAVのURLを得る方法(2016年版)</a>を参照してください。</p></li>
+</ol>
 
         
     <ul class="list-inline tags" style="margin-top: 15px; margin-left: 0px">
